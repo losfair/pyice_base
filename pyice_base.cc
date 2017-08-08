@@ -10,6 +10,7 @@ PYBIND11_MODULE(pyice_base, this_module) {
         .def(py::init<>())
         .def("listen", &ice::Server::listen)
         .def("load_bitcode", &ice::Server::load_bitcode)
+        .def("load_bitcode_from_file", &ice::Server::load_bitcode_from_file)
         .def("add_endpoint", &ice::Server::add_endpoint)
         .def("route_async", &ice::Server::route_async)
         .def("disable_request_logging", &ice::Server::disable_request_logging)
